@@ -9,7 +9,7 @@ permalink: /about/
 
 I am currently working as a Research Assistant in Datenbanken und Informationssysteme group in Humboldt-Universität zu Berlin. I am also a member of a PhD school on service-oriented Architectures for the Integration of Software-based Processes, exemplified by Health Care Systems and Medical Technology (SOAMED). 
 
-## Biographical highlights
+### Biographical highlights
 PhD. in in Computer Engineering, Humboldt-Universität zu Berlin, July 2016 - still
 
 M.Sc. in Computer Engineering, Middle East Technical University, Jan 2013 - Dec 2015 
@@ -19,5 +19,5 @@ Title of Master's thesis: "Design And Development of Medical Recommendation Syst
 B.Sc. in Computer Engineering, Bilkent University, 2013 
 
 
-## Areas of interest:
+### Areas of interest:
 Database Systems, Business Process Modeling, Privacy, Clinical Informatics, Data Mining, Machine Learning
