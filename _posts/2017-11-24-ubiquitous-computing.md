@@ -4,9 +4,6 @@ title:  "Ubiquitous Computing"
 date:   2017-11-24 16:09
 categories: ubiquitous computing
 ---
-
-# Ubiquitous Computing
-
 Ubiquitous Computing (ubicomp) is a concept in computer science where computing is made to appear anytime and everywhere. 
 "Ubiquitous Computing" term was first articulated by Mark Weiser in 1988 at the Computer Science Lab at Xerox PARC. 
 
