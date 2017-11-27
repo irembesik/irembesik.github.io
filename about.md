@@ -7,7 +7,7 @@ permalink: /about/
 # Irem Besik, M.Sc.                     
 ![image alt text](https://cdn-images-1.medium.com/max/1200/0*Yl6VdkjvoIUPztXN.)
 
-I am currently working as a Research Assistant in Datenbanken und Informationssysteme group in Humboldt-Universität zu Berlin. I am also a member of a PhD school on service-oriented Architectures for the Integration of Software-based Processes, exemplified by Health Care Systems and Medical Technology (SOAMED). My research focuses specifically on privacy in clinical business process models. 
+I am currently working as a Research Assistant in Datenbanken und Informationssysteme group at Humboldt-Universität zu Berlin. I am also a member of a PhD school on service-oriented Architectures for the Integration of Software-based Processes, exemplified by Health Care Systems and Medical Technology (SOAMED). My research focuses specifically on privacy in clinical business process models. 
 
 ### Biographical highlights
 PhD. in Computer Engineering, Humboldt-Universität zu Berlin, July 2016 - still
