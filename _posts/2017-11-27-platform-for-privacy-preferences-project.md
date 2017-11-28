@@ -25,6 +25,8 @@ of privacy policies.
 
 Now, let's discuss some privacy policy languages (P3P and EPAL) and some privacy preference languages (APPEL and XPref). 
 
+---
+
 ## Platform for Privacy Preferences (P3P) Project
 The P3P Project, developed by W3C, enables Web sites to express their privacy practices in a standard format 
 that can be retrieved automatically and interpreted easily by user agents. P3P user agents will allow 
@@ -35,11 +37,11 @@ The below image summarizes how P3P works: [4]
 
 ![alt text](http://archive.oreilly.com/network/excerpt/p3p/graphics/wsc2_ac01.gif)
 
-### P3P / XML Encoding:
+#### P3P / XML Encoding:
 
 ![alt text](https://image.slidesharecdn.com/priv4ppt114/95/priv4ppt-45-728.jpg?cb=1273624516)
 
-### P3P Vocabulary: [5]
+#### P3P Vocabulary: [5]
 - *Who* is collecting data? 
 - *What data* is collected?
 - For *what purpose* will data be used?
@@ -65,6 +67,7 @@ and will be stored indefinitely.*[6]
  </DATA-GROUP>
 </STATEMENT> 
 ```
+---
 
 ## A P3P Preference Exchange Language (APPEL)
 APPEL (A P3P Preferences Exchange Language) is a W3C work that specifies a language for describing sets of preferences 
@@ -96,6 +99,7 @@ APPEL rule set shown below implements the following preference:
   </appel:RULE> 
 </appel:RULESET>
 ```
+---
 
 ## Enterprise Privacy Authorization Language (EPAL)
 
@@ -136,6 +140,8 @@ EPAL policy shown below means the following:
 P3P is an excellent language for expressing high level privacy promises on web sites. However, EPAL should be used to define an enforceable privacy policy within an enterprise. [9]
 
 ![Alt text](epal-p3p.png)
+
+---
 
 ## XPref
 
@@ -208,6 +214,7 @@ XPref rule set shown below implements the following preference:
  <RULE behavior="block" condition="true"/> 
 </RULESET>
 ```
+---
 
 #### References:
 
