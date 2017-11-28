@@ -124,8 +124,8 @@ EPAL policy shown below means the following:
 ```xml
 </rule>
 <rule id="rule2" ruling="allow">
-<data user id = "parent"/>
-           <data category id = "p3p: any category"/>
+<data-user id = "parent"/>
+           <data-category id = "p3p: any category"/>
            <purpose id = "p3p: current"/>
            <action id = "read"/>
 </rule>
@@ -209,7 +209,8 @@ XPref rule set shown below implements the following preference:
  <RULE behavior="request"
   condition="/POLICY [
    every $stmt in STATEMENT satisfies (  
-    every $purpose in $stmt/PURPOSE/*, every $recip in $stmt/RECIPIENT/* satisfies  
+    every $purpose in $stmt/PURPOSE/*, 
+    every $recip in $stmt/RECIPIENT/* satisfies  
      (name($purpose) = "current" or
      name($purpose) = "pseudo-analysis" or
      (name($purpose) = "individual-analysis" and name($recip) = "ours")) )]" />
