@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Platform for Privacy Preferences (P3P) Project"
+title:  "Privacy Languages"
 date:   2017-11-27 17:00:00
 categories: privacy preference
 ---
 
 I would like to start the article by giving some introductory information about two prominent privacy-related terminologies 
-which are privacy policy and privacy preference.
+which are **privacy policy** and **privacy preference**.
 
 ## Privacy Policy:
 
