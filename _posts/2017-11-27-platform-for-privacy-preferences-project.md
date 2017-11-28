@@ -135,17 +135,7 @@ EPAL policy shown below means the following:
 
 P3P is an excellent language for expressing high level privacy promises on web sites. However, EPAL should be used to define an enforceable privacy policy within an enterprise. [9]
 
-|                     | EPAL           | P3P             |
-| ------------------- |:-------------- | :-------------- |
-| Data Categories     | Hierarchy      | Predefined list |
-| User                | Hierarchy      | Predefined list |
-| Purposes            | Hierarchy      | Predefined list |
-| Actions             | List           | 'use'           |
-| Conditions          | XACML          | none            |
-| Obligations         | List           | 'retention'     |
-| Privacy Choices     | Generalized    | +/- purposes/recipient/retention |
-| Properties          |  <ul><li>Flexible</li><li>Hierarchical</li><li>Access control</li><li>Enforceable</li><li>Less interoperable</li></ul> | <ul><li>Simple</li><li>Interoperable</li><li>Less extensible</li><li>No enforcement</li><li>Limited</li><li>Web-centric</li></ul> |
- 
+![Alt text](epal-p3p.png)
 
 ## XPref
 
