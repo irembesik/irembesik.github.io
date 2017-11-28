@@ -2,7 +2,7 @@
 layout: post
 title:  "Privacy Languages"
 date:   2017-11-27 17:00:00
-categories: privacy preference
+categories: privacy language
 ---
 
 I would like to start the article by giving some introductory information about two prominent privacy-related terminologies 
@@ -139,7 +139,7 @@ EPAL policy shown below means the following:
 
 P3P is an excellent language for expressing high level privacy promises on web sites. However, EPAL should be used to define an enforceable privacy policy within an enterprise. [9]
 
-![Alt text](epal-p3p.png)
+![Alt text](irembesik/irembesik.github.io/_posts/epal-p3p.png)
 
 ---
 
