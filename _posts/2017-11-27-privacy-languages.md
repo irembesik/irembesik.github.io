@@ -139,7 +139,8 @@ EPAL policy shown below means the following:
 
 P3P is an excellent language for expressing high level privacy promises on web sites. However, EPAL should be used to define an enforceable privacy policy within an enterprise. [9]
 
-![Alt text](irembesik/irembesik.github.io/_posts/epal-p3p.png)
+![Alt text](https://raw.github.com/irembesik/irembesik.github.io/master/_posts/epal-p3p.png)
+
 
 ---
 
