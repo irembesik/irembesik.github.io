@@ -3,7 +3,6 @@ layout: post
 title:  "Privacy Languages"
 date:   2017-11-27 17:00:00
 categories: 
-  - privacy language\
   - privacy
   - phd-posts
 ---

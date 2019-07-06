@@ -3,7 +3,6 @@ layout: post
 title:  "Ubiquitous Computing"
 date:   2017-11-24 16:09
 categories: 
-  - ubiquitous computing
   - phd-posts
 ---
 Ubiquitous Computing (ubicomp) is a concept in computer science where computing is made to appear anytime and everywhere. 
