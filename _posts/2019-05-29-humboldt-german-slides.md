@@ -14,7 +14,7 @@ categories: german
  
 .iframe-container iframe {
    border: 0;
-   height: 100%;
+   height: 500px;
    left: 0;
    position: absolute;
    top: 0;
