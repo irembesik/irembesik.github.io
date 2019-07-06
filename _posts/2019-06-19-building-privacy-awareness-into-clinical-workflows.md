@@ -3,7 +3,7 @@ layout: post
 title:  "Building Privacy-Awareness into Clinical Workflows"
 date:   2019-06-19 00:10
 categories: 
-  - phd-works
+  - phd-posts
   - privacy
 ---
 
