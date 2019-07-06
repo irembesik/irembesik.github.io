@@ -3,6 +3,7 @@ layout: post
 title:  "Alexander von Humboldt - Slides in German"
 date:   2019-05-29 00:10
 categories: german
+visible: 0
 ---
 
 <style>
