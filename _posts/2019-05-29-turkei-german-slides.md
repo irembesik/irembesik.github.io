@@ -5,8 +5,28 @@ date:   2019-05-29 00:10
 categories: german
 ---
 
-<object data="https://irem.dev/turkei-vortrag.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="https://irem.dev/turkei-vortrag.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://irem.dev/turkei-vortrag.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+<style>
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+ 
+.iframe-container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
+ 
+/* 4x3 Aspect Ratio */
+.iframe-container-4x3 {
+  padding-top: 75%;
+}
+</style>
+
+<div class="iframe-container">
+  <iframe src="https://drive.google.com/file/d/1fTPOjwXRAa051ybMMr_W5k1F8tbN8ep_/preview" allowfullscreen frameborder="0"></iframe>
+</div>
