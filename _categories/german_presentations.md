@@ -1,4 +1,4 @@
 ---
-tag: german_presentations
-permalink: "/category/german_presentations"
+tag: german-presentations
+permalink: "/category/german-presentations"
 ---
