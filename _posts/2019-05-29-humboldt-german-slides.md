@@ -28,5 +28,8 @@ categories: german
 </style>
 
 <div class="iframe-container">
-  <iframe src="https://drive.google.com/file/d/1fNkqQnejn44y53JBFeu6NbOoZI8hyNqS/preview" allowfullscreen frameborder="0"></iframe>
+
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.1972%;">
+<iframe src="https://speakerdeck.com/player/0f115a9af9b14143ab1d7332ce2bafaa" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen scrolling="no" allow="encrypted-media"></iframe></div>
+
 </div>
