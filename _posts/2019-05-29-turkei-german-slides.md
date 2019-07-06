@@ -8,7 +8,7 @@ categories: german
 <style>
 .iframe-container {
   overflow: hidden;
-  padding-top: 56.25%;
+  padding-top: 10px;
   position: relative;
 }
  
@@ -23,7 +23,7 @@ categories: german
  
 /* 4x3 Aspect Ratio */
 .iframe-container-4x3 {
-  padding-top: 75%;
+  padding-top: 10px;
 }
 </style>
 
