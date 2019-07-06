@@ -3,6 +3,7 @@ layout: post
 title:  "Interessante Fakten über die Türkei"
 date:   2019-05-29 00:10
 categories: german
+visible: 0
 ---
 
 <style>
