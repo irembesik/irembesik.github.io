@@ -2,7 +2,10 @@
 layout: post
 title:  "Privacy Languages"
 date:   2017-11-27 17:00:00
-categories: privacy language
+categories: 
+  - privacy language\
+  - privacy
+  - phd-posts
 ---
 
 I would like to start the article by giving some introductory information about two prominent privacy-related terminologies 
