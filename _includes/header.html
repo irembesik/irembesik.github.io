@@ -60,23 +60,24 @@
       </a>
 
       <div class="trigger">
-          <div class="dropdown">
-              <button class="dropbtn">Categories</button>
-              <div class="dropdown-content">
-                 <a class="page-link" href="/categories/phd-posts">PhD Posts</a> 
-                <a class="page-link" href="/categories/german-presentations">German Slides</a>
-    
-               
-              </div>
-          </div>
 
         {% for my_page in site.pages %}
-          {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-          {% endif %}
+        {% if my_page.title %}
+        <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+        {% endif %}
         {% endfor %}
 
-      </div>
-    </nav>
-  </div>
+        <div class="dropdown">
+          <button class="dropbtn">Categories</button>
+          <div class="dropdown-content">
+           <a class="page-link" href="/categories/phd-posts">PhD Posts</a> 
+           <a class="page-link" href="/categories/german-presentations">German Slides</a>
+           
+           
+         </div>
+       </div>
+
+     </div>
+   </nav>
+ </div>
 </header>
