@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Building Privacy-Awareness into Clinical Workflows"
+title:  "Slides: Building Privacy-Awareness into Clinical Workflows"
 date:   2019-06-19 00:10
 categories: 
   - phd-posts
