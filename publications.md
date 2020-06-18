@@ -3,7 +3,10 @@ layout: page
 title: Publications
 permalink: /pub/
 ---
+## [Managing Consent in Workflows under GDPR](https://irem.dev/publications/consent-paper.pdf)
+_2020_
 
+The European Union General Data Protection Regulation (GDPR) defines the principles to be met by organizations when processing personal data in order to guarantee data privacy. According to GDPR, consent is required for establishing a legal basis for processing personal data, if there are no other legal grounds for the processing. Besides any identifiable "natural" person, also known as data subject, has the right to withdraw the given consent to process his or her personal data at any time. It is the organization's responsibility to ensure consent and its revocation to demonstrate its compliance with GDPR. With respect to GDPR compliance, organizations can benefit from workflows as they might be used to ensure that consent is obtained before processing personal data. This paper addresses how to enable organizations to manage consent and revocation through their workflows.
 
 ## [Ontology-Based Privacy Compliance Checking for Clinical Workflows](https://irem.dev/publications/besik-paper.pdf)
 _2019_
