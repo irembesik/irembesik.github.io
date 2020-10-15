@@ -29,8 +29,5 @@ visible: 0
 </style>
 
 <div class="iframe-container">
-
-<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.1972%;">
-<iframe src="https://speakerdeck.com/player/d27bbfa0a08c4be491cfd8ef819fc678" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen scrolling="no" allow="encrypted-media"></iframe></div>
-
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 74.9296%;"><iframe src="//speakerdeck.com/player/d27bbfa0a08c4be491cfd8ef819fc678" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen scrolling="no" allow="encrypted-media"></iframe></div>
 </div>
