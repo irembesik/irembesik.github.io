@@ -6,9 +6,9 @@ date:   2023-01-14 17:00:00
 
 
 <p style="display: grid; place-items: center; grid-template-columns: 64% 6% 30%;">
-  <a href="/assets/rakotzbrucke.jpeg"><img src="https://irem.dev/assets/rakotzbrucke-small.jpeg" style="" alt="Yoga" /></a>
+  <a href="/assets/14_01_23/rakotzbrucke.jpeg"><img src="https://irem.dev/assets/14_01_23/rakotzbrucke-small.jpeg" style="" alt="Yoga" /></a>
   <span></span>
-  <a href="/assets/rakotzbrucke-2.jpeg"><img src="https://irem.dev/assets/rakotzbrucke-2-small.jpeg" style="" alt="Fire" /></a>
+  <a href="/assets/14_01_23/rakotzbrucke-2.jpeg"><img src="https://irem.dev/assets/14_01_23/rakotzbrucke-2-small.jpeg" style="" alt="Fire" /></a>
 </p>
 
 
