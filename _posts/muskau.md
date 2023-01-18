@@ -1,0 +1,45 @@
+---
+layout: post
+title:  "Muskau Arch Trip"
+date:   2023-01-14 17:00:00
+---
+
+We have visited the transnational Geopark “Muskauer Faltenbogen’ (Łuk Mużakowa). There we have explored a post-mining area of the former lignite mine ‘Babina’, where lignite and ceramic clays were mine from 1921 to 1973. 
+
+The post-mining lakes delight with unusual colours of highly acidic water, which contain compounds of many elements - mainly iron, calcium and sulphur, as well as iron bacteria.
+
+<p style="text-align:center">
+<a href="https://irem.dev/assets/selfie_orig.jpg"><img src="https://irem.dev/assets/selfie_small.jpg" style="max-width:75%" alt="First selfie of the trip"/></a>
+</p>
+
+
+The ferry was enormous, with a restaurant and a duty-free shop. We entered in order based on the type of vehicle: trucks first, followed by cars, tren bikes, etc. Like a parade, it was. I was feeling like a member of the biker gang. The engine noise made it impossible to stay in the garage. But the upper sections were fantastic. We arrived in Gedser, our first town in Denmark, after a one-and-a-half-hour journey.
+
+<a href="/assets/ferry_orig.jpg"><img src="https://irem.dev/assets/ferry_small.jpg" alt="View from ferry" /></a>
+
+Except for the flags on both sides of the road, I have no interesting memories of Gedser. That was one of the first of plenty of Danish flags we saw on our trip. I never considered it before, but I believe there is a flag fetish in Denmark. In that regard, it is fairly similar to Turkey, but definitely not to Germany...
+
+<p style="text-align:center">
+<a href="/assets/flag_orig.jpg"><img src="https://irem.dev/assets/flag_small.jpg" style="max-width:75%" alt="Gedser" /></a>
+</p>
+
+We saw beautiful scenery and houses as we cycled to Nykøbing.
+
+<a href="/assets/house_orig.jpg"><img src="https://irem.dev/assets/house_small.jpg" alt="Gedser" /></a>
+
+To find a place to stay, we used the Shelter app. Our first campsite was in Sundby, and it was taken care by an elderly lady named Birgitt. She had been going there every day for 26 years to see if anyone had come to camp. The weather was perfect when we arrived at our campsite. We did some stretching  after a long day of cycling.  Birgitt recommended us to swim into the lake, so did we. There we ran into some drunk youngsters who were celebrating a bachelor party. They were super friendly and welcoming. All were saluting as they passed by. My last trip to Denmark, about 6 months ago, left me with only positive memories and ideas about the country and its people. After that first day, I was convinced that I was right. 
+
+<a href="/assets/camp_orig.jpg"><img src="https://irem.dev/assets/camp_small.jpg" alt="Campsite" /></a>
+
+For the first time, I saw a composting toilet. I really like the concept. We went shopping at Føtex market and used the campfire to grill some paprika on the embers.
+
+<p style="display: grid; place-items: center; grid-template-columns: 47% 6% 47%;">
+  <a href="/assets/yoga_orig.jpg"><img src="https://irem.dev/assets/yoga_small.jpg" style="" alt="Yoga" /></a>
+  <span></span>
+  <a href="/assets/fire_orig.jpg"><img src="https://irem.dev/assets/fire_small.jpg" style="" alt="Fire" /></a>
+</p>
+
+I was planning to swim in the morning again - I had no idea what was waiting for us. The night was scary. We had a terrifying storm. Everything we left outside got wet because we were unaware of the rain. In the morning the rain did not stop. It was a demoralising start to the day.
+
+<a href="/assets/campview_orig.jpg"><img src="https://irem.dev/assets/campview_small.jpg" alt="Campsite Scenery" /></a>
+
