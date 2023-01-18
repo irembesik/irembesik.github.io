@@ -6,11 +6,14 @@ date:   2023-01-14 17:00:00
 
 
 <p style="display: grid; place-items: center; grid-template-columns: 64% 6% 30%;">
-  <a href="/assets/14_01_23/rakotzbrucke.jpeg"><img src="https://irem.dev/assets/14_01_23/rakotzbrucke-small.jpeg" style="" alt="Yoga" /></a>
+  <a href="/assets/14_01_23/rakotzbrucke.jpeg"><img src="https://irem.dev/assets/14_01_23/rakotzbrucke-small.jpeg" style="" alt="Rakotzbrucke" /></a>
   <span></span>
-  <a href="/assets/14_01_23/rakotzbrucke-2.jpeg"><img src="https://irem.dev/assets/14_01_23/rakotzbrucke-2-small.jpeg" style="" alt="Fire" /></a>
+  <a href="/assets/14_01_23/rakotzbrucke-2.jpeg"><img src="https://irem.dev/assets/14_01_23/rakotzbrucke-2-small.jpeg" style="" alt="Rakotzbrucke-2" /></a>
 </p>
 
+<p style="text-align:center">
+<a href="https://irem.dev/assets/14_01_23/schloss.jpg"><img src="https://irem.dev/assets/14_01_23/schloss-small.jpg" alt="Schloss"/></a>
+</p>
 
 We have visited the transnational Geopark “Muskauer Faltenbogen’ (Łuk Mużakowa). There we have explored a post-mining area of the former lignite mine ‘Babina’, where lignite and ceramic clays were mine from 1921 to 1973. 
 
