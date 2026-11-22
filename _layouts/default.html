@@ -1,20 +1,40 @@
 <!DOCTYPE html>
-<html>
-
-  {% include head.html %}
-
-  <body>
-
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <script src="{{ '/js/theme.js' | prepend: site.baseurl }}"></script>
+  <title>{% if page.title %}{{ page.title | escape }} — {% endif %}{{ site.title | escape }}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 | escape }}{% else %}{{ site.description | escape }}{% endif %}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+{% include site-icons.html %}
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="preload" href="{{ '/assets/fonts/inter-latin.woff2' | prepend: site.baseurl }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ '/css/site.css' | prepend: site.baseurl }}">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="site-wrapper">
+    <header class="topbar">
+      <div class="topbar__identity">
+        <a class="topbar__name" href="{{ '/' | prepend: site.baseurl }}">{{ site.title }}</a>
+        <ul class="topbar__roles" role="list">
+          <li>Tour guide</li>
+          <li><span class="topbar__separator" aria-hidden="true">·</span> Moderator</li>
+          <li><span class="topbar__separator" aria-hidden="true">·</span> Turkish teacher</li>
+        </ul>
       </div>
-    </div>
-
-    {% include footer.html %}
-
-  </body>
-
+      {% include theme-toggle.html %}
+    </header>
+    <main class="inner-page" id="main-content" tabindex="-1">
+      <a class="back-link" href="{{ '/' | prepend: site.baseurl }}">&larr; Home</a>
+      {{ content }}
+    </main>
+    <footer class="site-footer">
+      &copy; {{ site.title }} {{ 'now' | date: '%Y' }}
+    </footer>
+  </div>
+  <script src="{{ '/js/site.js' | prepend: site.baseurl }}"></script>
+</body>
 </html>
