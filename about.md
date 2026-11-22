@@ -16,11 +16,11 @@ I am currently working as a Research Assistant in Datenbanken und Informationssy
 
 ### Biographical highlights
 
-PhD in Computer Engineering, Humboldt-Universität zu Berlin, July 2016 — present
+PhD in Computer Engineering, Humboldt-Universität zu Berlin, July 2016 - present
 
-M.Sc. in Computer Engineering, Middle East Technical University, Jan 2013 — Dec 2015
+M.Sc. in Computer Engineering, Middle East Technical University, Jan 2013 - Dec 2015
 
-Title of Master's thesis: *Design And Development of Medical Recommendation System for Home Care Service for Geriatrics* — [Abstract](https://user.ceng.metu.edu.tr/~sirem/abstract.pdf)
+Title of Master's thesis: *Design And Development of Medical Recommendation System for Home Care Service for Geriatrics* - [Abstract](https://user.ceng.metu.edu.tr/~sirem/abstract.pdf)
 
 B.Sc. in Computer Engineering, Bilkent University, 2013
 

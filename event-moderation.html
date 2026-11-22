@@ -1,0 +1,30 @@
+---
+layout: service
+title: Event Moderation
+permalink: /event-moderation/
+service: moderation
+description: "Freelance event moderation with Saliha İrem Beşik. Discuss your audience, topics, format, and plans."
+social_image: /assets/moderation/1.jpg
+social_image_alt: Moderating a conversation in an art gallery
+---
+<section class="service-hero service-hero--collage" aria-labelledby="service-heading">
+  <div class="service-lead">
+    <h1 class="service-title" id="service-heading" data-i18n="eventModeration">Event moderation</h1>
+    <p data-i18n="moderationDescription">Planning a panel, a discussion, or an event? Tell me about the format, audience, and topics. We can discuss the right approach together.</p>
+    <div class="service-actions"><a class="contact-cta" href="#contact-section" data-i18n="discussEvent">Let’s talk about your event</a></div>
+  </div>
+  <figure class="tour-collage tour-collage--pair" aria-label="Moments from moderated conversations" data-i18n-aria="moderationPhotos">
+    <button class="tour-collage__photo tour-collage__photo--one" type="button" aria-label="Bring the art gallery conversation photo to the front" data-i18n-aria="collageModerationOne" aria-pressed="false">
+      <picture>
+        <source type="image/webp" srcset="{{ '/assets/moderation/1-640.webp' | relative_url }} 640w, {{ '/assets/moderation/1-960.webp' | relative_url }} 960w" sizes="(max-width: 800px) 75vw, 33vw">
+        <img src="{{ '/assets/moderation/1.jpg' | relative_url }}" alt="{{ site.title | escape }} moderating a conversation in an art gallery" width="960" height="977" loading="eager" fetchpriority="high">
+      </picture>
+    </button>
+    <button class="tour-collage__photo tour-collage__photo--two" type="button" aria-label="Bring the conversation with a guest photo to the front" data-i18n-aria="collageModerationTwo" aria-pressed="false">
+      <picture>
+        <source type="image/webp" srcset="{{ '/assets/moderation/2-640.webp' | relative_url }} 640w, {{ '/assets/moderation/2-1120.webp' | relative_url }} 1120w" sizes="(max-width: 800px) 75vw, 33vw">
+        <img src="{{ '/assets/moderation/2.jpeg' | relative_url }}" alt="{{ site.title | escape }} hosting a conversation with a guest" width="5120" height="3840" loading="eager">
+      </picture>
+    </button>
+  </figure>
+</section>

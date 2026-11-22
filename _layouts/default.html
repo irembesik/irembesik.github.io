@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   <script src="{{ '/js/theme.js' | prepend: site.baseurl }}"></script>
-  <title>{% if page.title %}{{ page.title | escape }} — {% endif %}{{ site.title | escape }}</title>
+  <title>{% if page.title %}{{ page.title | escape }} - {% endif %}{{ site.title | escape }}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 | escape }}{% else %}{{ site.description | escape }}{% endif %}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 {% include site-icons.html %}
@@ -20,9 +20,9 @@
       <div class="topbar__identity">
         <a class="topbar__name" href="{{ '/' | prepend: site.baseurl }}">{{ site.title }}</a>
         <ul class="topbar__roles" role="list">
-          <li>Tour guide</li>
-          <li><span class="topbar__separator" aria-hidden="true">·</span> Moderator</li>
-          <li><span class="topbar__separator" aria-hidden="true">·</span> Turkish teacher</li>
+          <li><a href="{{ '/guided-tours/' | relative_url }}">Tour guide</a></li>
+          <li><span class="topbar__separator" aria-hidden="true">·</span> <a href="{{ '/event-moderation/' | relative_url }}">Moderator</a></li>
+          <li><span class="topbar__separator" aria-hidden="true">·</span> <a href="{{ '/turkish-lessons/' | relative_url }}">Turkish teacher</a></li>
         </ul>
       </div>
       {% include theme-toggle.html %}

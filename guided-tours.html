@@ -1,0 +1,50 @@
+---
+layout: service
+title: Guided Tours
+permalink: /guided-tours/
+service: tours
+description: "Explore with Saliha İrem Beşik: city and food tours, hikes, and group trips. Read guest reviews from Google and Trustpilot."
+social_image: /assets/tourguide-photos/1.jpg
+social_image_alt: Meeting a group at Berlin Hauptbahnhof
+---
+<section class="service-hero service-hero--collage" aria-labelledby="service-heading">
+  <div class="service-lead">
+    <p class="service-eyebrow" data-i18n="exploreTogether">Explore together</p>
+    <h1 class="service-title" id="service-heading" data-i18n="guidedTours">Guided tours</h1>
+    <p class="service-intro" data-i18n="toursIntro">Places to discover. Stories to share. Good company along the way.</p>
+    <p data-i18n="toursDescription">From city food tours to hikes and group trips, my work is about helping people discover places and enjoy the journey together.</p>
+    <p data-i18n="toursPlanning">Tell me where you’d like to go, who’s coming, and what you’re curious about. We can discuss your plans together.</p>
+    <ul class="service-tags" role="list">
+      <li data-i18n="cityFoodTours">City &amp; food tours</li>
+      <li data-i18n="hikesNature">Hikes &amp; nature</li>
+      <li data-i18n="groupTrips">Group trips</li>
+    </ul>
+    <div class="service-actions">
+      <a class="contact-cta" href="#contact-section" data-i18n="discussTour">Let’s talk about your tour</a>
+      <a class="reviews-link" href="#reviews-section"><span data-i18n="guestReviews">Guest reviews</span><span aria-hidden="true">↓</span></a>
+    </div>
+  </div>
+  <figure class="tour-collage" aria-label="Moments from tours and group trips" data-i18n-aria="tourPhotos">
+    <button class="tour-collage__photo tour-collage__photo--one" type="button" aria-label="Bring the station photo to the front" data-i18n-aria="collageStation" aria-pressed="false">
+      <picture>
+        <source type="image/webp" srcset="{{ '/assets/tourguide-photos/1-640.webp' | relative_url }} 640w, {{ '/assets/tourguide-photos/1-1120.webp' | relative_url }} 1120w" sizes="(max-width: 800px) 75vw, 33vw">
+        <img src="{{ '/assets/tourguide-photos/1.jpg' | relative_url }}" alt="{{ site.title | escape }} talking with guests at Berlin Hauptbahnhof" width="1600" height="900" loading="eager" fetchpriority="high">
+      </picture>
+    </button>
+    <button class="tour-collage__photo tour-collage__photo--two" type="button" aria-label="Bring the group photo to the front" data-i18n-aria="collageGroup" aria-pressed="false">
+      <picture>
+        <source type="image/webp" srcset="{{ '/assets/tourguide-photos/2-640.webp' | relative_url }} 640w, {{ '/assets/tourguide-photos/2-1120.webp' | relative_url }} 1120w" sizes="(max-width: 800px) 75vw, 33vw">
+        <img src="{{ '/assets/tourguide-photos/2.jpg' | relative_url }}" alt="A group posing together during a trip with {{ site.title | escape }}" width="4000" height="3000" loading="eager">
+      </picture>
+    </button>
+    <button class="tour-collage__photo tour-collage__photo--three" type="button" aria-label="Bring the hiking photo to the front" data-i18n-aria="collageHike" aria-pressed="false">
+      <picture>
+        <source type="image/webp" srcset="{{ '/assets/tourguide-photos/3-640.webp' | relative_url }} 640w, {{ '/assets/tourguide-photos/3-1120.webp' | relative_url }} 1120w" sizes="(max-width: 800px) 75vw, 33vw">
+        <img src="{{ '/assets/tourguide-photos/3.jpg' | relative_url }}" alt="{{ site.title | escape }} and a hiking group at a rocky viewpoint" width="4032" height="3024" loading="lazy" decoding="async">
+      </picture>
+    </button>
+  </figure>
+</section>
+<div class="service-reviews">
+  {% include testimonials.html %}
+</div>

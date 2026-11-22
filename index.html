@@ -2,26 +2,7 @@
 layout: home
 ---
 
-<header class="topbar">
-  <div class="topbar__identity">
-    <h1 class="topbar__heading"><a class="topbar__name" href="#home-section">{{ site.title }}</a></h1>
-    <ul class="topbar__roles" role="list">
-      <li><span data-i18n="tourGuide">Tour guide</span></li>
-      <li><span class="topbar__separator" aria-hidden="true">·</span> <span data-i18n="moderator">Moderator</span></li>
-      <li><span class="topbar__separator" aria-hidden="true">·</span> <span data-i18n="turkishTeacher">Turkish teacher</span></li>
-    </ul>
-  </div>
-  <nav class="topbar__nav" aria-label="Main" data-i18n-aria="mainNav">
-    <div class="language-options" role="group" aria-label="Language" data-i18n-aria="language">
-      <button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
-      <button type="button" data-language="de" lang="de" aria-label="Deutsch" aria-pressed="false">DE</button>
-      <button type="button" data-language="tr" lang="tr" aria-label="Türkçe" aria-pressed="false">TR</button>
-    </div>
-    <a href="#about-section" data-i18n="aboutMe">About me</a>
-    <a href="#contact-section" data-i18n="contact">Contact</a>
-    {% include theme-toggle.html %}
-  </nav>
-</header>
+{% include site-header.html home=true %}
 
 <main class="site-main" id="home-section" tabindex="-1">
   <div class="hero-split">
@@ -40,21 +21,22 @@ layout: home
             <span data-i18n="getInTouch">Get in touch</span>
             <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg>
           </a>
+          <a class="reviews-link" href="{{ '/guided-tours/' | relative_url }}#reviews-section"><span data-i18n="guestReviews">Guest reviews</span><span aria-hidden="true">↗</span></a>
         </div>
         <p class="hero-email"><span data-i18n="emailDirectly">Or email me directly:</span> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
       </div>
 
       <dl class="hero-services">
         <div>
-          <dt><a href="#contact-section" data-service="tours"><span data-i18n="guidedTours">Guided tours</span><span aria-hidden="true">↗</span></a></dt>
+          <dt><a href="{{ '/guided-tours/' | relative_url }}"><span data-i18n="guidedTours">Guided tours</span><span aria-hidden="true">↗</span></a></dt>
           <dd data-i18n="toursDetail">Discover places with a personal guide.</dd>
         </div>
         <div>
-          <dt><a href="#contact-section" data-service="moderation"><span data-i18n="eventModeration">Event moderation</span><span aria-hidden="true">↗</span></a></dt>
+          <dt><a href="{{ '/event-moderation/' | relative_url }}"><span data-i18n="eventModeration">Event moderation</span><span aria-hidden="true">↗</span></a></dt>
           <dd data-i18n="moderationDetail">Bring structure and flow to your event.</dd>
         </div>
         <div>
-          <dt><a href="#contact-section" data-service="lessons"><span data-i18n="turkishLessons">Turkish lessons</span><span aria-hidden="true">↗</span></a></dt>
+          <dt><a href="{{ '/turkish-lessons/' | relative_url }}"><span data-i18n="turkishLessons">Turkish lessons</span><span aria-hidden="true">↗</span></a></dt>
           <dd data-i18n="lessonsDetail">Get support for your Turkish learning goals.</dd>
         </div>
       </dl>
@@ -80,15 +62,14 @@ layout: home
         <p data-i18n="bio">I am currently working as a Research Assistant in Datenbanken und Informationssysteme group at Humboldt-Universität zu Berlin. I am also a member of a PhD school on service-oriented Architectures for the Integration of Software-based Processes, exemplified by Health Care Systems and Medical Technology (SOAMED). My research focuses specifically on privacy in clinical business process models.</p>
 
         <h3 data-i18n="bioHighlights">Biographical highlights</h3>
-        <p data-i18n="phd">PhD in Computer Engineering, Humboldt-Universität zu Berlin, July 2016 — present</p>
-        <p><span data-i18n="masters">M.Sc. in Computer Engineering, Middle East Technical University, Jan 2013 — Dec 2015</span><br>
-        <span data-i18n="thesisLabel">Title of Master's thesis:</span> <em lang="en">Design And Development of Medical Recommendation System for Home Care Service for Geriatrics</em> — <a href="https://user.ceng.metu.edu.tr/~sirem/abstract.pdf" data-i18n="abstract">Abstract</a></p>
+        <p data-i18n="phd">PhD in Computer Engineering, Humboldt-Universität zu Berlin, July 2016 - present</p>
+        <p><span data-i18n="masters">M.Sc. in Computer Engineering, Middle East Technical University, Jan 2013 - Dec 2015</span><br>
+        <span data-i18n="thesisLabel">Title of Master's thesis:</span> <em lang="en">Design And Development of Medical Recommendation System for Home Care Service for Geriatrics</em> - <a href="https://user.ceng.metu.edu.tr/~sirem/abstract.pdf" data-i18n="abstract">Abstract</a></p>
         <p data-i18n="bachelors">B.Sc. in Computer Engineering, Bilkent University, 2013</p>
 
         <h3 data-i18n="interestsHeading">Areas of interest</h3>
         <p data-i18n="interests">Database Systems, Business Process Modeling, Privacy, Clinical Informatics, Data Mining, Machine Learning</p>
         <ul class="academic-links" role="list">
-          <li><a href="{{ '/cv.pdf' | prepend: site.baseurl }}" data-i18n="downloadCv">Download CV (PDF)</a></li>
           <li><a href="https://github.com/{{ site.github_username }}">GitHub</a></li>
           <li><a href="#publications-section" data-i18n="publications">Publications</a></li>
         </ul>
@@ -134,7 +115,7 @@ layout: home
         <summary class="project-toggle">
           <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M20,28l-12,-12h24Z"/></svg>
           <span data-i18n="privacyWorkflows">Privacy &amp; Clinical Workflows</span>
-          <span class="year">2017 — 2020</span>
+          <span class="year">2017 - 2020</span>
         </summary>
         <div class="project-content">
           <ul class="item-list">
@@ -158,7 +139,7 @@ layout: home
         <summary class="project-toggle">
           <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M20,28l-12,-12h24Z"/></svg>
           <span data-i18n="germanPresentations">German Presentations</span>
-          <span class="year">2019 — 2020</span>
+          <span class="year">2019 - 2020</span>
         </summary>
         <div class="project-content">
           <ul class="item-list">
@@ -180,7 +161,7 @@ layout: home
         <summary class="project-toggle">
           <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M20,28l-12,-12h24Z"/></svg>
           <span data-i18n="personal">Personal</span>
-          <span class="year">2022 — 2023</span>
+          <span class="year">2022 - 2023</span>
         </summary>
         <div class="project-content">
           <ul class="item-list">
