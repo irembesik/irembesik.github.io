@@ -3,6 +3,7 @@ layout: page
 title: Publications
 permalink: /pub/
 ---
+
 ## [Managing Consent in Workflows under GDPR](https://irem.dev/publications/consent-paper.pdf)
 _2020_
 
@@ -12,7 +13,6 @@ The European Union General Data Protection Regulation (GDPR) defines the princip
 _2019_
 
 Data privacy is an essential human right to determine what, when, and how personal data is communicated to various recipients. In the healthcare domain, it is an important and challenging issue how to safeguard data privacy of patients. Healthcare providers have to process sensitive medical data compliantly with binding privacy regulations such as the European Union General Data Protection Regulation. Clinical workflows play an important role in healthcare domain by outlining the tasks must be done for the delivery of clinical services. However, in general, they do not support privacy constraints in an adequate way. In this paper, we propose an ontology-based privacy compliance check approach to detect the possible privacy violations in clinical workflows. In order to analyze the potential applicability of our methodology, we describe a Newborn Screening scenario where we show how to apply semantic reasoning to support building privacy-awareness.
-
 
 ## [A formal approach to build privacy-awareness into clinical workflows](https://irem.dev/publications/formalism-paper.pdf)
 _2019_

@@ -1,20 +1,20 @@
 ---
 layout: default
+title: PhD Posts
+permalink: /categories/phd-posts
 ---
 
-{% assign tag = "phd-posts" %}
-<div class="post-list">
-  <h1>PhD Posts</h1>
+<h1 class="post-title">PhD Posts</h1>
 
-  <ul class="post-list">
-
-  {% for post in site.categories[tag] %}
-    <li>
-      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-      <h2>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </h2>
-    </li>
+<ul class="item-list">
+  {% for post in site.posts %}
+  {% unless post.categories contains 'german-presentations' %}
+  {% unless post.title contains 'Denmark' or post.title contains 'Muskau' %}
+  <li>
+    <span class="date">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <span class="title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></span>
+  </li>
+  {% endunless %}
+  {% endunless %}
   {% endfor %}
-  </ul>
-</div>
+</ul>

@@ -1,20 +1,18 @@
 ---
 layout: default
+title: German Presentations
+permalink: /categories/german-presentations
 ---
 
-{% assign tag = "german-presentations" %}
-<div class="post-list">
-  <h1>German Presentations</h1>
+<h1 class="post-title">German Presentations</h1>
 
-  <ul class="post-list">
-
-  {% for post in site.categories[tag] %}
-    <li>
-      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-      <h2>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </h2>
-    </li>
+<ul class="item-list">
+  {% for post in site.posts %}
+  {% if post.categories contains 'german-presentations' %}
+  <li>
+    <span class="date">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <span class="title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></span>
+  </li>
+  {% endif %}
   {% endfor %}
-  </ul>
-</div>
+</ul>

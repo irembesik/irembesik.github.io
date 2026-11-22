@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <script src="{{ '/js/theme.js' | prepend: site.baseurl }}"></script>
+  <title>{{ site.title | escape }} — Tours, Moderation &amp; Turkish Lessons</title>
+  <meta name="description" content="{{ site.description | escape }} Get in touch for guided tours, events, and Turkish lessons.">
+  <meta property="og:site_name" content="{{ site.title | escape }}">
+  <meta property="og:title" content="{{ site.title | escape }}">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Freelance tour guide, moderator, and Turkish teacher. Get in touch for guided tours, events, and Turkish lessons.">
+  <meta property="og:image" content="{{ '/assets/mountains-share.jpg' | prepend: site.baseurl | prepend: site.url }}">
+  <meta property="og:image:alt" content="{{ site.title | escape }} by the water with snow-covered mountains behind her">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="{{ site.url }}">
+  <link rel="canonical" href="{{ site.url }}">
+{% include site-icons.html %}
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="preload" href="{{ '/assets/fonts/inter-latin.woff2' | prepend: site.baseurl }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ '/css/site.css' | prepend: site.baseurl }}">
+</head>
+<body>
+  <a class="skip-link" href="#home-section" data-i18n="skipContent">Skip to content</a>
+  <div class="site-wrapper">
+    {{ content }}
+  </div>
+  <script src="{{ '/js/languages.js' | prepend: site.baseurl }}"></script>
+  <script src="{{ '/js/site.js' | prepend: site.baseurl }}"></script>
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Person","name":{{ site.title | jsonify }},"url":{{ site.url | jsonify }},"email":{{ site.email | jsonify }},"jobTitle":"Freelance tour guide, moderator, and Turkish teacher"}
+  </script>
+</body>
+</html>
