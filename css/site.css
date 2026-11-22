@@ -386,15 +386,23 @@ img {
 .reviews-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  justify-content: center;
   min-height: 2.75rem;
+  padding: 0.9rem 1.25rem;
+  border: 2px solid var(--control-border);
+  border-radius: 0.75rem;
+  background: transparent;
   color: var(--accent);
-  font-size: 0.95em;
+  font-size: 1em;
+  font-weight: 500;
   text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .reviews-link:hover {
-  text-decoration: underline;
+  background: var(--surface);
+  border-color: var(--accent);
+  text-decoration: none;
 }
 
 .about-contact {
@@ -422,12 +430,28 @@ img {
 }
 
 .hero-services {
+  display: grid;
+  gap: 0.85rem;
   margin: 0;
 }
 
 .hero-services > div {
-  padding: 0.85rem 0;
-  border-top: 1px solid var(--border);
+  position: relative;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--control-border);
+  border-radius: 0.85rem;
+  background: var(--surface);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-services > div:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0.25rem 1rem var(--shadow);
+}
+
+.hero-services > div:focus-within {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
 }
 
 .hero-services dt {
@@ -436,29 +460,30 @@ img {
 }
 
 .hero-services dt a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  min-height: 2.75rem;
-  text-decoration: none;
+  display: block;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+}
+
+.hero-services dt a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0.85rem;
 }
 
 .hero-services dt a:hover {
   color: var(--accent);
 }
 
-.hero-services dt a > span[aria-hidden] {
-  color: var(--accent);
-  transition: transform 0.2s ease;
-}
-
-.hero-services dt a:hover > span[aria-hidden] {
-  transform: translate(2px, -2px);
+.hero-services dt a:focus-visible {
+  outline: none;
 }
 
 .hero-services dd {
-  margin: 0.25rem 0 0;
+  margin: 0.45rem 0 0;
   color: var(--muted);
   font-size: 0.9em;
 }
@@ -1430,6 +1455,20 @@ img {
   .is-carousel .review-card {
     flex-basis: 88%;
     padding: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .hero-actions,
+  .service-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+
+  .hero-actions > a,
+  .service-actions > a {
+    width: 100%;
   }
 }
 
