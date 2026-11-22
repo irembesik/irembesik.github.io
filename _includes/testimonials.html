@@ -1,0 +1,54 @@
+{% assign reviews = site.data.testimonials %}
+{% assign google_reviews = reviews | where: 'source', 'google' %}
+{% assign trustpilot_reviews = reviews | where: 'source', 'trustpilot' %}
+<section class="reviews-section" id="reviews-section" aria-labelledby="reviews-heading">
+  <div class="reviews-heading">
+    <p class="reviews-eyebrow" data-i18n="guestFeedback">Guest feedback</p>
+    <h2 class="section-heading" id="reviews-heading" data-i18n="reviewsHeading">Good company. Great memories.</h2>
+    <p class="reviews-intro" data-i18n="reviewsIntro">Reviews from tours and trips with Walk With Us and Urbanature Travel, shared on Google and Trustpilot.</p>
+  </div>
+
+  <div class="reviews-toolbar">
+    <div class="reviews-filters" role="group" aria-label="Filter reviews by source" data-i18n-aria="filterReviews" hidden>
+      <button class="reviews-filter" type="button" data-review-filter="all" aria-pressed="true" aria-controls="reviews-track"><span data-i18n="allReviews">All reviews</span><span class="reviews-filter__count">{{ reviews.size }}</span></button>
+      <button class="reviews-filter" type="button" data-review-filter="google" aria-pressed="false" aria-controls="reviews-track">Google<span class="reviews-filter__count">{{ google_reviews.size }}</span></button>
+      <button class="reviews-filter" type="button" data-review-filter="trustpilot" aria-pressed="false" aria-controls="reviews-track">Trustpilot<span class="reviews-filter__count">{{ trustpilot_reviews.size }}</span></button>
+    </div>
+    <div class="reviews-controls" hidden>
+      <button class="reviews-arrow" type="button" data-review-prev aria-label="Previous reviews" data-i18n-aria="previousReviews" aria-controls="reviews-track"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m14 6-6 6 6 6"/></svg></button>
+      <button class="reviews-arrow" type="button" data-review-next aria-label="Next reviews" data-i18n-aria="nextReviews" aria-controls="reviews-track"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m10 6 6 6-6 6"/></svg></button>
+    </div>
+  </div>
+
+  <ul class="reviews-track" id="reviews-track" role="list" tabindex="0" aria-label="Guest reviews" data-i18n-aria="reviewList">
+    {% for review in reviews %}
+    <li class="review-card" data-review-source="{{ review.source }}">
+      <article aria-labelledby="review-author-{{ review.id }}">
+        <div class="review-meta">
+          <span class="review-source">{% if review.source == 'google' %}Google{% else %}Trustpilot{% endif %}</span>
+          <time datetime="{{ review.published }}" data-localized-date>{{ review.published | date: '%b %-d, %Y' }}</time>
+        </div>
+        <div class="review-stars" role="img" aria-label="5 out of 5 stars" data-i18n-aria="fiveStars"><span aria-hidden="true">★★★★★</span></div>
+        <blockquote class="review-quote" lang="{{ review.language }}" id="review-quote-{{ review.id }}"><p>{{ review.text | escape }}</p></blockquote>
+        <button class="review-quote-toggle" type="button" aria-expanded="false" aria-controls="review-quote-{{ review.id }}" hidden></button>
+        <footer class="review-footer">
+          <div class="review-person">
+            <span class="review-avatar" aria-hidden="true">{{ review.initials }}</span>
+            <div>
+              <p class="review-author" id="review-author-{{ review.id }}">{{ review.author | escape }}</p>
+              <p class="review-organization">{{ review.organization }}</p>
+            </div>
+          </div>
+        </footer>
+      </article>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <div class="reviews-bottom">
+    <p class="reviews-note" data-i18n="reviewsNote">Reviews are kept in their original language.</p>
+    <p class="reviews-position" aria-live="polite" aria-atomic="true" hidden><span data-i18n="reviewsLabel">Reviews</span> <span data-review-range></span></p>
+  </div>
+  <span hidden data-review-more-label data-i18n="readFullReview">Read full review</span>
+  <span hidden data-review-less-label data-i18n="showLessReview">Show less</span>
+</section>

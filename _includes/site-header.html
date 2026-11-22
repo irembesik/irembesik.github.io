@@ -1,0 +1,20 @@
+<header class="topbar">
+  <div class="topbar__identity">
+    {% if include.home %}<h1 class="topbar__heading">{% endif %}<a class="topbar__name" href="{{ '/' | relative_url }}">{{ site.title }}</a>{% if include.home %}</h1>{% endif %}
+    <ul class="topbar__roles" role="list">
+      <li><a href="{{ '/guided-tours/' | relative_url }}"{% if page.service == 'tours' %} aria-current="page"{% endif %} data-i18n="tourGuide">Tour guide</a></li>
+      <li><span class="topbar__separator" aria-hidden="true">·</span> <a href="{{ '/event-moderation/' | relative_url }}"{% if page.service == 'moderation' %} aria-current="page"{% endif %} data-i18n="moderator">Moderator</a></li>
+      <li><span class="topbar__separator" aria-hidden="true">·</span> <a href="{{ '/turkish-lessons/' | relative_url }}"{% if page.service == 'lessons' %} aria-current="page"{% endif %} data-i18n="turkishTeacher">Turkish teacher</a></li>
+    </ul>
+  </div>
+  <nav class="topbar__nav" aria-label="Main" data-i18n-aria="mainNav">
+    <div class="language-options" role="group" aria-label="Language" data-i18n-aria="language">
+      <button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+      <button type="button" data-language="de" lang="de" aria-label="Deutsch" aria-pressed="false">DE</button>
+      <button type="button" data-language="tr" lang="tr" aria-label="Türkçe" aria-pressed="false">TR</button>
+    </div>
+    <a href="{{ '/' | relative_url }}#about-section" data-i18n="aboutMe">About me</a>
+    <a href="#contact-section" data-i18n="contact">Contact</a>
+    {% include theme-toggle.html %}
+  </nav>
+</header>

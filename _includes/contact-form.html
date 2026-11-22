@@ -1,7 +1,15 @@
 <section id="contact-section" aria-labelledby="contact-heading">
   <h2 class="section-heading" id="contact-heading" data-i18n="contactHeading">Let’s talk.</h2>
   <div class="contact-intro">
+    {% if page.service == 'tours' %}
+    <p data-i18n="contactTours">Tell me about your group, destination, and preferred dates.</p>
+    {% elsif page.service == 'moderation' %}
+    <p data-i18n="contactModeration">Tell me about your audience, event format, and preferred date.</p>
+    {% elsif page.service == 'lessons' %}
+    <p data-i18n="contactLessons">Tell me about your level, learning goals, and availability.</p>
+    {% else %}
     <p data-i18n="contactIntro">Tell me about your tour, event, or Turkish learning goals.</p>
+    {% endif %}
     <p class="contact-direct"><span data-i18n="emailDirectly">Or email me directly:</span> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
   </div>
   <form class="contact-form" action="mailto:{{ site.email }}" method="post" enctype="text/plain" aria-describedby="contact-form-note">
@@ -21,9 +29,9 @@
       <label for="contact-service" data-i18n="serviceLabel">What can I help you with?</label>
       <select id="contact-service" name="service" required>
         <option value="" data-i18n="servicePrompt">Choose a service</option>
-        <option value="tours" data-i18n="guidedTours">Guided tours</option>
-        <option value="moderation" data-i18n="eventModeration">Event moderation</option>
-        <option value="lessons" data-i18n="turkishLessons">Turkish lessons</option>
+        <option value="tours" data-i18n="guidedTours"{% if page.service == 'tours' %} selected{% endif %}>Guided tours</option>
+        <option value="moderation" data-i18n="eventModeration"{% if page.service == 'moderation' %} selected{% endif %}>Event moderation</option>
+        <option value="lessons" data-i18n="turkishLessons"{% if page.service == 'lessons' %} selected{% endif %}>Turkish lessons</option>
         <option value="other" data-i18n="otherEnquiry">Something else</option>
       </select>
     </div>

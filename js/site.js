@@ -133,15 +133,6 @@
       return;
     }
 
-    document.querySelectorAll('[data-service]').forEach(function (link) {
-      link.addEventListener('click', function (event) {
-        event.preventDefault();
-        form.querySelector('[name="service"]').value = link.dataset.service;
-        document.querySelector('#contact-section').scrollIntoView({ behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: 'start' });
-        form.querySelector('[name="name"]').focus({ preventScroll: true });
-      });
-    });
-
     form.addEventListener('input', function (event) {
       if (event.target.name === 'name' || event.target.name === 'message') {
         event.target.setCustomValidity('');
@@ -162,7 +153,7 @@
       var data = new FormData(form);
       var service = form.querySelector('[name="service"]');
       var serviceName = service.options[service.selectedIndex].textContent.trim();
-      var subject = form.querySelector('#contact-subject-prefix').textContent.trim() + ' — ' + serviceName;
+      var subject = form.querySelector('#contact-subject-prefix').textContent.trim() + ' - ' + serviceName;
       var body = ['name', 'email', 'service', 'message'].map(function (field) {
         var input = form.querySelector('[name="' + field + '"]');
         var label = form.querySelector('label[for="' + input.id + '"]').textContent.trim();
@@ -173,6 +164,170 @@
       window.location.href = form.getAttribute('action') + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
       form.querySelector('#contact-form-status').hidden = false;
     });
+  }
+
+  function initCollage() {
+    document.querySelectorAll('.tour-collage').forEach(function (collage) {
+      var photos = collage.querySelectorAll('.tour-collage__photo');
+      photos.forEach(function (photo) {
+        photo.addEventListener('click', function () {
+          photos.forEach(function (item) {
+            var selected = item === photo;
+            item.classList.toggle('is-front', selected);
+            item.setAttribute('aria-pressed', String(selected));
+          });
+        });
+      });
+    });
+  }
+
+  function initReviews() {
+    var section = document.querySelector('.reviews-section');
+    if (!section) {
+      return;
+    }
+
+    var track = section.querySelector('.reviews-track');
+    var cards = Array.from(track.querySelectorAll('.review-card'));
+    var filters = section.querySelectorAll('[data-review-filter]');
+    var previous = section.querySelector('[data-review-prev]');
+    var next = section.querySelector('[data-review-next]');
+    var range = section.querySelector('[data-review-range]');
+    var scrollTimer;
+    var resizeTimer;
+
+    section.classList.add('is-carousel');
+    section.querySelector('.reviews-filters').hidden = false;
+    section.querySelector('.reviews-controls').hidden = false;
+    section.querySelector('.reviews-position').hidden = false;
+
+    function visibleCards() {
+      return cards.filter(function (card) {
+        return !card.hidden;
+      });
+    }
+
+    function updatePosition() {
+      var visible = visibleCards();
+      var viewport = track.getBoundingClientRect();
+      var inView = [];
+      visible.forEach(function (card, index) {
+        var box = card.getBoundingClientRect();
+        var overlap = Math.min(box.right, viewport.right) - Math.max(box.left, viewport.left);
+        if (overlap >= Math.min(box.width, viewport.width) * 0.5) {
+          inView.push(index + 1);
+        }
+      });
+
+      if (inView.length) {
+        var first = inView[0];
+        var last = inView[inView.length - 1];
+        range.textContent = (first === last ? first : first + '–' + last) + ' / ' + visible.length;
+      }
+      previous.disabled = track.scrollLeft <= 1;
+      next.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 1;
+    }
+
+    function updateQuotes() {
+      var more = section.querySelector('[data-review-more-label]').textContent;
+      var less = section.querySelector('[data-review-less-label]').textContent;
+      visibleCards().forEach(function (card) {
+        var quote = card.querySelector('.review-quote');
+        var button = card.querySelector('.review-quote-toggle');
+        var expanded = button.getAttribute('aria-expanded') === 'true';
+        if (expanded) {
+          quote.classList.remove('is-collapsed');
+          button.hidden = false;
+          button.textContent = less;
+          return;
+        }
+
+        quote.classList.add('is-collapsed');
+        var truncated = quote.scrollHeight > quote.clientHeight + 1;
+        button.hidden = !truncated;
+        button.textContent = more;
+        if (!truncated) {
+          quote.classList.remove('is-collapsed');
+        }
+      });
+    }
+
+    function move(direction) {
+      var visible = visibleCards();
+      if (visible.length < 2) {
+        return;
+      }
+      var step = visible[1].offsetLeft - visible[0].offsetLeft;
+      var gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      var perPage = Math.max(1, Math.floor((track.clientWidth + gap + 1) / step));
+      track.scrollBy({ left: direction * step * perPage, behavior: prefersReducedMotion() ? 'auto' : 'smooth' });
+    }
+
+    previous.addEventListener('click', function () { move(-1); });
+    next.addEventListener('click', function () { move(1); });
+
+    filters.forEach(function (button) {
+      button.addEventListener('click', function () {
+        var source = button.dataset.reviewFilter;
+        cards.forEach(function (card) {
+          card.hidden = source !== 'all' && card.dataset.reviewSource !== source;
+        });
+        filters.forEach(function (filter) {
+          filter.setAttribute('aria-pressed', String(filter === button));
+        });
+        track.scrollTo({ left: 0, behavior: 'auto' });
+        updateQuotes();
+        updatePosition();
+      });
+    });
+
+    cards.forEach(function (card) {
+      var button = card.querySelector('.review-quote-toggle');
+      button.addEventListener('click', function () {
+        var expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', String(!expanded));
+        updateQuotes();
+      });
+    });
+
+    track.addEventListener('scroll', function () {
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(updatePosition, 120);
+    }, { passive: true });
+
+    track.addEventListener('keydown', function (event) {
+      if (event.target !== track) {
+        return;
+      }
+      if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+        event.preventDefault();
+        move(event.key === 'ArrowLeft' ? -1 : 1);
+      } else if (event.key === 'Home' || event.key === 'End') {
+        event.preventDefault();
+        track.scrollTo({ left: event.key === 'Home' ? 0 : track.scrollWidth, behavior: prefersReducedMotion() ? 'auto' : 'smooth' });
+      }
+    });
+
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        updateQuotes();
+        updatePosition();
+      }, 120);
+    });
+    document.addEventListener('site:languagechange', function () {
+      updateQuotes();
+      updatePosition();
+    });
+
+    updateQuotes();
+    updatePosition();
+    if (document.fonts) {
+      document.fonts.ready.then(function () {
+        updateQuotes();
+        updatePosition();
+      });
+    }
   }
 
   function initReveal() {
@@ -189,10 +344,14 @@
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function () {
       initContactForm();
+      initCollage();
+      initReviews();
       initReveal();
     });
   } else {
     initContactForm();
+    initCollage();
+    initReviews();
     initReveal();
   }
 })();

@@ -1,0 +1,15 @@
+---
+layout: home
+---
+{% include site-header.html %}
+<main class="service-page" id="home-section" tabindex="-1" data-default-service="{{ page.service }}">
+  <div class="service-breadcrumb"><a href="{{ '/' | relative_url }}"><span aria-hidden="true">←</span> <span data-i18n="allServices">All services</span></a></div>
+  {{ content }}
+  <div class="service-contact">
+    {% include contact-form.html %}
+  </div>
+</main>
+<footer class="site-footer">
+  &copy; {{ site.title }} {{ 'now' | date: '%Y' }}
+  <p data-i18n="footer">Freelance tour guide, moderator, and Turkish teacher.</p>
+</footer>

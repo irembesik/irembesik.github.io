@@ -8,7 +8,7 @@
 # Site settings
 title: Saliha İrem Beşik
 email: s.irem.besik@gmail.com
-description: "Saliha İrem Beşik — Freelance tour guide, moderator, and Turkish teacher."
+description: "Saliha İrem Beşik - Freelance tour guide, moderator, and Turkish teacher."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://irem.dev" # the base hostname & protocol for your site
 twitter_username: ""
